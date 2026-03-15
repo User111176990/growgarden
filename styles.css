@@ -1,0 +1,25 @@
+:root {
+  --bg: #fff8f1;
+  --accent: #76c893;
+  --wall: #f9dcc4;
+  --floor: #d4a373;
+}
+* { box-sizing: border-box; font-family: Inter, system-ui, sans-serif; }
+body { margin: 0; background: var(--bg); color: #2d3142; }
+.topbar { display:flex; justify-content:space-between; align-items:center; padding: 12px 18px; background:#fff; border-bottom:1px solid #eee; position:sticky; top:0; }
+.stats { display:flex; gap: 16px; }
+main { max-width: 1100px; margin: 0 auto; padding: 16px; display:grid; gap: 16px; }
+.controls { display:flex; gap:10px; flex-wrap: wrap; }
+button { border:0; background: var(--accent); color:#123; padding: 10px 12px; border-radius: 10px; cursor:pointer; font-weight: 600; }
+button.danger { background:#ff99ac; }
+.house { border-radius: 16px; overflow:hidden; border:1px solid #e9e0d8; }
+.wall { background: linear-gradient(180deg,#ffe8d6,#ffd7ba); min-height: 180px; display:flex; align-items:center; justify-content:center; color:#7f5539; }
+.floor { background: var(--floor); min-height: 260px; padding: 16px; display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 10px; }
+.shop { background:#fff; border:1px solid #eee; border-radius: 12px; padding: 14px; }
+.pot { background:#fefae0; border:1px solid #ccd5ae; border-radius: 12px; padding:10px; display:grid; gap:8px; }
+.plant { min-height:48px; display:flex; align-items:center; justify-content:center; background:#e9edc9; border-radius:8px; text-align:center; padding:6px; }
+.pot-actions { display:grid; grid-template-columns: repeat(3,1fr); gap:6px; }
+.pot-actions button { padding:6px; font-size:12px; }
+small { min-height: 20px; }
+.wilt { filter: saturate(0.5); color: #8d6e63; }
+.dead { background:#dad7cd; }
