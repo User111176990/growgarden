@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrowGarden - Prototipo v0</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>GrowGarden — Prototipo jugable v0</h1>
+    <div class="stats">
+      <span>🪙 <b id="coins">0</b></span>
+      <span>🍂 Compost: <b id="compost">0</b></span>
+      <span>🕒 Día juego: <b id="gameDay">1</b></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="advanceDay">+1 día</button>
+      <button id="dailyLogin">Login diario (+50 compost)</button>
+      <button id="saveBtn">Guardar</button>
+      <button id="resetBtn" class="danger">Reset</button>
+    </section>
+
+    <section class="house">
+      <div class="wall">Pared interior (estilo cartoon)</div>
+      <div class="floor" id="pots"></div>
+    </section>
+
+    <section class="shop">
+      <h2>Tienda rápida</h2>
+      <button data-seed="tomate">Semilla Tomate (30)</button>
+      <button data-seed="menta">Semilla Menta (50)</button>
+      <button data-seed="fresa">Semilla Fresa (30)</button>
+      <button id="buyPot">Comprar maceta (100)</button>
+      <p>Semillas en inventario: <span id="seedBag">-</span></p>
+      <p>Haz click en una maceta vacía para plantar la semilla seleccionada.</p>
+    </section>
+  </main>
+
+  <template id="potTemplate">
+    <article class="pot">
+      <div class="plant">(vacía)</div>
+      <div class="pot-actions">
+        <button class="water">💧 Regar</button>
+        <button class="fert">🍂 Abonar</button>
+        <button class="harvest">✨ Reclamar</button>
+      </div>
+      <small class="status"></small>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
